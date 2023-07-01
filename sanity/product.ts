@@ -9,16 +9,6 @@
             type:"string",
         },
         {
-            name:"gender",
-            title:"Product gender",
-            type:"string",
-        },
-        {
-            name:"category",
-            title:"Product category",
-            type:"string"
-        },
-        {
             name:"image",
             title:"Product Image",
             type:"array",
