@@ -12,7 +12,7 @@ export default function Home() {
       <Homepage />
       <HomePageCardsPromo />
       {/* @ts-ignore server component */}
-      {/* <SwipeCard /> */}
+      <SwipeCard />
     </>
   );
 }

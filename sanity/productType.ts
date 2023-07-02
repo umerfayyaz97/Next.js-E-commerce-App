@@ -9,7 +9,6 @@ export const productType = defineType({
         name: "Ptype",
         title:"Product Type",
         type:"string",
-
         }),
         
     ]
