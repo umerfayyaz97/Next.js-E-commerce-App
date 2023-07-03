@@ -46,7 +46,6 @@ const Homepage = () => {
           <Image src="/header.png" alt="home" width={800} height={700} />
         </div>
       </div>
-
       <div className="text-center ">
         <h3 className="text-xs font-semibold text-blue-600 ">PROMOTIONS</h3>
         <h1 className="text-2xl font-bold ">Our Promotion Events</h1>

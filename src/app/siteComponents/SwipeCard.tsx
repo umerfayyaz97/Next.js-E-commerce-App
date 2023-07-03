@@ -24,18 +24,27 @@ const SwipeCard = async () => {
   const data: IProduct[] = await getProducts();
 
   return (
-    <div className="">
-      {data.slice(0, 3).map((item) => (
-        <div className="">
-          <Image
-            src={urlForImage(item.image[0]).url()}
-            alt={item.title}
-            height={250}
-            width={250}
-          />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="text-center ">
+        <h3 className="text-xs font-semibold text-blue-600 ">PRODUCTS</h3>
+        <h1 className="text-2xl font-bold ">Check What We Have</h1>
+        <br></br>
+      </div>
+      <div className="grid grid-cols-[repeat(3,auto)] justify-center gap-x-6">
+        {data.slice(0, 3).map((item) => (
+          <div className="">
+            <Image
+              src={urlForImage(item.image[0]).url()}
+              alt={item.title}
+              height={300}
+              width={300}
+            />
+            <h2 className="">{item.title}</h2>
+            <h3 className="">{item.price}</h3>
+          </div>
+        ))}
+      </div>
+    </>
   );
 };
 
