@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { CgShoppingCart } from "react-icons/cg";
 import Image from "next/image";
-import HomePageCardsPromo from "./HomePageCardsPromo";
 
 const Homepage = () => {
   return (
@@ -13,13 +12,13 @@ const Homepage = () => {
           <Button className=" bg-blue-50" variant="secondary">
             <h3 className="font-bold text-blue-950">SALE 70%</h3>
           </Button>
-          <h1 className="text-4xl font-extrabold tracking-tight scroll-m-20 lg:text-5xl">
+          <h1 className="text-4xl font-bold tracking-tight scroll-m-20 lg:text-8xl">
             An Industrial Take on Streetwear
           </h1>
           <br></br>
-          <p className="leading-7 [&:not(:first-child)]:mt-6">
+          <p className="leading-7 text-xl [&:not(:first-child)]:mt-6">
             Anyone can beat you but no one can beat your outfit as long as you
-            wear ShoeMart outfits.
+            wear Moon Mart outfits.
           </p>
           <br></br>
           <Button asChild className="text-xl">
@@ -43,7 +42,7 @@ const Homepage = () => {
           </div>
         </div>
         <div className="flex-1">
-          <Image src="/header.png" alt="home" width={800} height={700} />
+          <Image src="/header.png" alt="home" width={800} height={500} />
         </div>
       </div>
       <div className="text-center ">

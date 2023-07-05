@@ -1,10 +1,8 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Header from "./siteComponents/Header";
-import Footer from "./siteComponents/Footer";
 import Homepage from "./siteComponents/Homepage";
 import HomePageCardsPromo from "./siteComponents/HomePageCardsPromo";
 import SwipeCard from "./siteComponents/SwipeCard";
+import DifferentFromOthers from "./siteComponents/DifferentFromOthers";
 
 export default function Home() {
   return (
@@ -13,6 +11,7 @@ export default function Home() {
       <HomePageCardsPromo />
       {/* @ts-ignore server component */}
       <SwipeCard />
+      <DifferentFromOthers />
     </>
   );
 }
