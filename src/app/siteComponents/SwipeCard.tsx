@@ -39,8 +39,8 @@ const SwipeCard = async () => {
               height={300}
               width={300}
             />
-            <h2 className="font-bold text-center">{item.title}</h2>
-            <h3 className="font-bold text-center">${item.price}</h3>
+            <h2 className=" font-[600] text-lg text-center">{item.title}</h2>
+            <h3 className="font-[600] text-lg text-center">${item.price}</h3>
           </div>
         ))}
       </div>

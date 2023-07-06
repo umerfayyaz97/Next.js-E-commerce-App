@@ -9,7 +9,7 @@ const HomePageCardsPromo = () => {
         {/* Left side elements of grid */}
         <div className="col-span-12 lg:col-span-6">
           <div className="flex flex-col bg-[#d6d6d8] justify-between px-8 lg:flex-row ">
-            <div className="">
+            <div>
               <h3 className="text-2xl font-bold">GET UPTO 60%</h3>
               <p className="font-[400] text-lg">For the Summer Season</p>
             </div>
