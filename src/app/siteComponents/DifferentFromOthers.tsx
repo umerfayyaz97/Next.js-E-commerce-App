@@ -7,42 +7,45 @@ const DifferentFromOthers = () => {
     <>
       <div className="mt-16 mb-10 md:my-12 md:mx-24">
         <div className="w-full text-end">
-          <h1 className="text-[#212121] text-left text-5xl lg:w-[45%] mb-4 lg:ml-auto font-bold lg:text-end  ">
+          <h1 className="text-[#212121] text-left text-5xl lg:w-[45%] mb-4 lg:ml-auto lg:text-left font-bold ">
             Unique and Authentic Vintage Designer Jewellery
           </h1>
+          <br></br>
+          <br></br>
         </div>
         <div className="grid grid-cols-12 gap-5">
           <div className="relative col-span-12 lg:col-span-4 md:col-span-12">
             <div className="font-bold text-[#212121] text-6xl lg:text-8xl absolute opacity-[.07] z-[1]">
               Different from others
             </div>
-            <br></br>
-            <div className="grid grid-cols-12">
-              <div className="col-span-12 lg:col-span-6">
-                <div className="grid grid-cols-12">
-                  <div className="col-span-12 mb-4">
-                    <h3 className="text-[#212121] text-lg font-bold">
-                      Using Good Quality Materials
-                    </h3>
-                    <p className="text-[#212121] font-[300] text-base">
-                      Lorem ipsum dolor sit amt, consectetur adipiscing elit
-                    </p>
-                  </div>
-                  <br></br>
-                  <div className="col-span-12 mb-4">
-                    <h3 className="text-[#212121] text-lg font-bold">
-                      Modern Fashion Design
-                    </h3>
-                    <p className="text-[#212121] font-[300] text-base">
-                      Lorem ipsum dolor sit amt, consectetur adipiscing elit
-                    </p>
-                    <br></br>
-                  </div>
-                </div>
+            <div className="grid grid-cols-2">
+              <div className="col-span-1 col-start-1 mb-4">
+                <h3 className="text-[#212121] text-lg font-bold">
+                  Using Good Quality Materials
+                </h3>
+                <p className="text-[#212121] font-[300] text-base">
+                  Lorem ipsum dolor sit amt, consectetur adipiscing elit
+                </p>
               </div>
-              <div className="col-span-12 col-start-8 mb-4">
+              <div className="col-span-1 col-start-2 mb-4">
                 <h3 className="text-[#212121] text-lg font-bold">
                   100% Handmade Products
+                </h3>
+                <p className="text-[#212121] font-[300] text-base">
+                  Lorem ipsum dolor sit amt, consectetur adipiscing elit
+                </p>
+              </div>
+              <div className="col-span-1 col-start-1 mb-4">
+                <h3 className="text-[#212121] text-lg font-bold">
+                  Modern Fashion Design
+                </h3>
+                <p className="text-[#212121] font-[300] text-base">
+                  Lorem ipsum dolor sit amt, consectetur adipiscing elit
+                </p>
+              </div>
+              <div className="col-span-1 col-start-2 mb-4">
+                <h3 className="text-[#212121] text-lg font-bold">
+                  Discount for Bulk Orders
                 </h3>
                 <p className="text-[#212121] font-[300] text-base">
                   Lorem ipsum dolor sit amt, consectetur adipiscing elit
@@ -58,8 +61,8 @@ const DifferentFromOthers = () => {
               alt="product7"
             />
           </div>
-          <div className="inline-block h-full col-span-12 m-auto lg:col-span-4 md:col-span-6">
-            <p className="text-justify text-base  text-[#212121]">
+          <div className="col-span-12 m-auto lg:col-span-4 md:col-span-6">
+            <p className="text-justify text-base text-[#212121]">
               This piece is ethically crafted in our small family-owned workshop
               in Peru with unmatched attention to detail and care. The Natural
               color is the actual natural color of the fiber, undyed and 100%
