@@ -68,7 +68,7 @@ const DifferentFromOthers = () => {
               color is the actual natural color of the fiber, undyed and 100%
               traceable.
             </p>
-            <Link href="/products">
+            <Link href="/All-Products">
               <button className="bg-[#212121] mt-8 font-[600] transition all hover:bg-white hover:text-black hover:border hover:border-black w-[150px] h-[42px] hover:border-solid px-2 py-1 rounded-md text-white">
                 See All products
               </button>

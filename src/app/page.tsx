@@ -4,6 +4,7 @@ import HomePageCardsPromo from "./siteComponents/HomePageCardsPromo";
 import SwipeCard from "./siteComponents/SwipeCard";
 import DifferentFromOthers from "./siteComponents/DifferentFromOthers";
 import NewsLetter from "./siteComponents/NewsLetter";
+// import Error from "./siteComponents/error";
 
 export default function Home() {
   return (

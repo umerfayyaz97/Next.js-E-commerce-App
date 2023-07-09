@@ -23,33 +23,28 @@ interface IProduct {
   _id: string;
 }
 
-const SwipeCard = async () => {
+const allProducts = async () => {
   const data: IProduct[] = await getProducts();
 
   return (
     <>
-      <div className="text-center">
-        <h3 className="text-xs font-semibold text-blue-600">PRODUCTS</h3>
-        <h1 className="text-2xl font-bold">Check What We Have</h1>
-        <br></br>
-      </div>
       <div className="grid grid-cols gap-y-2 md:grid-cols-[repeat(3,auto)] justify-center  gap-x-6">
-        {data.slice(0, 3).map((item, index) => (
-          <Link href={`/Details/${item._id}`}>
-            <div
-              key={index}
-              className="transition-all duration-300 transform product-card hover:scale-105"
-            >
+        {data.map((item, index) => (
+          <div
+            key={index}
+            className="transition-all duration-300 transform product-card hover:scale-105"
+          >
+            <Link href={`/Details/${item._id}`}>
               <Image
                 src={urlForImage(item.image[0]).url()}
                 alt={item.title}
                 height={300}
                 width={300}
               />
-              <h2 className=" font-[600] text-lg text-center">{item.title}</h2>
-              <h3 className="font-[600] text-lg text-center">${item.price}</h3>
-            </div>
-          </Link>
+            </Link>
+            <h2 className=" font-[600] text-lg text-center">{item.title}</h2>
+            <h3 className="font-[600] text-lg text-center">${item.price}</h3>
+          </div>
         ))}
       </div>
       <br></br>
@@ -59,4 +54,4 @@ const SwipeCard = async () => {
   );
 };
 
-export default SwipeCard;
+export default allProducts;

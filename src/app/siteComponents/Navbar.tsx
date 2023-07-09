@@ -26,13 +26,13 @@ const Navbar: React.FC = () => {
             <div className="hidden md:block">
               <div className="flex items-center ml-10 space-x-4">
                 <a
-                  href="#"
+                  href="/Female"
                   className="px-3 py-2 text-sm font-medium text-black rounded-md hover:bg-gray-700 hover:text-white"
                 >
                   Female
                 </a>
                 <a
-                  href="#"
+                  href="/Male"
                   className="px-3 py-2 text-sm font-medium text-black rounded-md hover:bg-gray-700 hover:text-white"
                 >
                   Male
@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
                   Kids
                 </a>
                 <a
-                  href="#"
+                  href="/All-Products"
                   className="px-3 py-2 text-sm font-medium text-black rounded-md hover:bg-gray-700 hover:text-white"
                 >
                   All Products
@@ -111,13 +111,13 @@ const Navbar: React.FC = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           <a
-            href="#"
+            href="/Female"
             className="block px-3 py-2 text-base font-medium text-black rounded-md hover:bg-gray-700 hover:text-white"
           >
             Female
           </a>
           <a
-            href="#"
+            href="/Male"
             className="block px-3 py-2 text-base font-medium text-black rounded-md hover:bg-gray-700 hover:text-white"
           >
             Male
@@ -129,7 +129,7 @@ const Navbar: React.FC = () => {
             Kids
           </a>
           <a
-            href="#"
+            href="/All-Products"
             className="block px-3 py-2 text-base font-medium text-black rounded-md hover:bg-gray-700 hover:text-white"
           >
             All Products
