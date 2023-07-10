@@ -125,16 +125,6 @@ const ProductDescription = async ({ params }: { params: { id: string } }) => {
                   <p className="text-lg">Title</p>
                   <h2 className="mt-8 ml-4 text-2xl font-bold">{price}</h2>
                 </div>
-                <p className="text-lg">Available Sizes:</p>
-                <div className="flex items-center">
-                  <button className="px-4 py-2 mr-2 bg-gray-300">-</button>
-                  <input
-                    className="w-16 px-4 py-2 text-center"
-                    type="number"
-                    defaultValue={1}
-                  />
-                  <button className="px-4 py-2 ml-2 bg-gray-300">+</button>
-                </div>
               </div>
               <div className="mt-4">
                 <button className="px-4 py-2 text-white bg-blue-500">
