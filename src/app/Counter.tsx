@@ -10,17 +10,17 @@ const counterview = () => {
     (state: RootState) => state.counterSlice.value
   );
   const increment = () => {
-    dispatch(counterActions.increment);
+    dispatch(counterActions.increment());
   };
   const decrement = () => {
-    dispatch(counterActions.decrement);
+    dispatch(counterActions.decrement());
   };
   return (
     <div className="flex justify-center gap-6">
       <button className="px-3 py-4 bg-green-500 ronded-md" onClick={increment}>
         +
       </button>
-      <div>Counter Value {counterValue}</div>
+      <div>Counter ValueE {counterValue}</div>
       <button className="px-3 py-4 bg-red-400 ronded-md" onClick={decrement}>
         -
       </button>
