@@ -1,4 +1,7 @@
+"use client";
 import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@/store/store";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -11,6 +14,10 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const cartValue = useSelector(
+    (state: RootState) => state.cartSlice.totalQuantity
+  );
 
   return (
     <nav className="">
@@ -58,7 +65,10 @@ const Navbar: React.FC = () => {
               type="search"
               placeholder="Search here"
             />
-            <Button variant="secondary">
+            <Button variant="secondary" className="relative ">
+              <span className="absolute top-0 w-4 h-4 px-1 py-0 text-xs text-center text-white bg-red-500 rounded-full right-3">
+                {cartValue}
+              </span>
               <CgShoppingCart />
             </Button>
           </div>

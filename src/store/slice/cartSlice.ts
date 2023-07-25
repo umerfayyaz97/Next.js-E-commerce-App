@@ -18,10 +18,10 @@ export const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, actions: PayloadAction<any>) => {
-      console.log(actions);
+      state.totalQuantity += actions.payload.quantity;
     },
     removeFromCart: (state, actions: PayloadAction<any>) => {
-      console.log(actions);
+      state.totalQuantity -= actions.payload.quantity;
     },
 
     clearCart: (state) => {
