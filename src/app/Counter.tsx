@@ -20,7 +20,7 @@ const counterview = () => {
       <button className="px-3 py-4 bg-green-500 ronded-md" onClick={increment}>
         +
       </button>
-      <div>Counter ValueE {counterValue}</div>
+      <div>Counter Valuee {counterValue}</div>
       <button className="px-3 py-4 bg-red-400 ronded-md" onClick={decrement}>
         -
       </button>
