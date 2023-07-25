@@ -3,7 +3,6 @@ import HomePageCardsPromo from "./siteComponents/HomePageCardsPromo";
 import SwipeCard from "./siteComponents/SwipeCard";
 import DifferentFromOthers from "./siteComponents/DifferentFromOthers";
 import NewsLetter from "./siteComponents/NewsLetter";
-import Counter from "./Counter";
 
 export default function Home() {
   return (
@@ -17,7 +16,6 @@ export default function Home() {
       <br></br>
       <br></br>
       <NewsLetter />
-      <Counter />
     </>
   );
 }
