@@ -10,9 +10,7 @@ const AddToCart = () => {
   const addItem = () => {
     dispatch(cartActions.addToCart({ quantity: 1 }));
   };
-  // const decrement = () => {
-  //   dispatch(counterActions.decrement());
-  // };
+
   return (
     <div>
       <Button onClick={addItem}>Add to Cart</Button>
