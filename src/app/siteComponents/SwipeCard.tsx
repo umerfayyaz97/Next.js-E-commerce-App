@@ -5,7 +5,7 @@ import { Image as IImage } from "sanity";
 import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
 import Link from "next/link";
-import AddToCart from "../AddToCart";
+import AddToCart from "./AddToCart";
 
 export const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product" ]{
@@ -57,7 +57,7 @@ const SwipeCard = async () => {
               </div>
             </Link>
             <div className="flex justify-center">
-              <AddToCart />
+              <AddToCart item={item} />
             </div>
           </div>
         ))}
