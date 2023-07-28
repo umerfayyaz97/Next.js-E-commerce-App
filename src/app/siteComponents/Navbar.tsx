@@ -65,12 +65,14 @@ const Navbar: React.FC = () => {
               type="search"
               placeholder="Search here"
             />
-            <Button variant="secondary" className="relative ">
-              <span className="absolute top-0 w-4 h-4 px-1 py-0 text-xs text-center text-white bg-red-500 rounded-full right-3">
-                {cartValue}
-              </span>
-              <CgShoppingCart />
-            </Button>
+            <a href="/Cart">
+              <Button variant="secondary" className="relative ">
+                <span className="absolute top-0 w-4 h-4 px-1 py-0 text-xs text-center text-white bg-red-500 rounded-full right-3">
+                  {cartValue}
+                </span>
+                <CgShoppingCart />
+              </Button>
+            </a>
           </div>
           <div className="flex -mr-2 md:hidden">
             <button

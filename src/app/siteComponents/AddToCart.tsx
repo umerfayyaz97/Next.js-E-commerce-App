@@ -22,6 +22,7 @@ const AddToCart: React.FC<{ item: IProduct }> = ({ item }) => {
         title,
         price,
         quantity: 0,
+        _id: undefined,
       })
     );
   };
