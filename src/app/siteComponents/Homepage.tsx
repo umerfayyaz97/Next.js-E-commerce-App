@@ -22,7 +22,7 @@ const Homepage = () => {
           </p>
           <br></br>
           <Button asChild className="text-xl">
-            <Link href="/login">
+            <Link href="/All-Products">
               {" "}
               <CgShoppingCart />
               Start Shopping
