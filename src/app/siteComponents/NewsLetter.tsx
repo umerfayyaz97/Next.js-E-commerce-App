@@ -1,5 +1,6 @@
 import React from "react";
 import { Input } from "@/components/ui/input";
+// import { UserButton } from "@clerk/nextjs";
 
 const NewsLetter = () => {
   return (
@@ -24,6 +25,7 @@ const NewsLetter = () => {
             <button className="bg-[#212121] items-center mt-4 md:mt-0 ml-0 md:ml-4 font-[600] transition all hover:bg-white hover:text-black hover:border hover:border-black w-full md:w-auto h-[42px] hover:border-solid px-2 py-1 rounded-md text-white">
               Get Started
             </button>
+            {/* <UserButton afterSignOutUrl="/" /> */}
           </div>
         </div>
       </div>
