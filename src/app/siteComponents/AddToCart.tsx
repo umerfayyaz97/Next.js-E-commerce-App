@@ -4,6 +4,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { Button } from "@/components/ui/button";
 import { cartActions } from "@/store/slice/cartSlice";
+import toast from "react-hot-toast";
 
 interface IProduct {
   title: string;
@@ -25,6 +26,7 @@ const AddToCart: React.FC<{ item: IProduct }> = ({ item }) => {
         _id: undefined,
       })
     );
+    toast.success("Product Added");
   };
 
   return (

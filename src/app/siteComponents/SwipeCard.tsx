@@ -6,7 +6,7 @@ import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
 import Link from "next/link";
 import AddToCart from "./AddToCart";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
 export const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product" ]{
@@ -31,8 +31,6 @@ const SwipeCard = async () => {
   return (
     <>
       <div>
-        <Toaster />
-
         <div className="text-center">
           <h3 className="text-xs font-semibold text-blue-600">PRODUCTS</h3>
           <h1 className="text-2xl font-bold">Check What We Have</h1>
@@ -62,7 +60,6 @@ const SwipeCard = async () => {
               </Link>
               <div className="flex justify-center">
                 <AddToCart item={item} />
-                toast.success('Successfully toasted!')
               </div>
             </div>
           ))}

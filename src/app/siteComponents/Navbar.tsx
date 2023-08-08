@@ -7,6 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { CgShoppingCart } from "react-icons/cg";
 import Link from "next/link";
+import { UserButton } from "@clerk/nextjs";
+import { useClerk } from "@clerk/clerk-react";
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,6 +20,8 @@ const Navbar: React.FC = () => {
   const cartValue = useSelector(
     (state: RootState) => state.cartSlice.totalQuantity
   );
+
+  const user = useClerk();
 
   return (
     <nav className="">
@@ -71,9 +75,18 @@ const Navbar: React.FC = () => {
                 <span className="absolute top-0 w-4 h-4 px-0 py-0 text-xs text-center text-white bg-red-500 rounded-full right-3">
                   {cartValue}
                 </span>
+
+                {/* <SignIn /> */}
                 <CgShoppingCart />
               </Button>
             </Link>
+            {/* {user ? (
+              <UserButton afterSignOutUrl="/" />
+            ) : (
+              <Link href="/sign-in">Sign In</Link>
+            )} */}
+            {/* <Link href={"/sign-in"}>Sign</Link>
+            <UserButton afterSignOutUrl="/" /> */}
           </div>
           <div className="flex -mr-2 md:hidden">
             <button

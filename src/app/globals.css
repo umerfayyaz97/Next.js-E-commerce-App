@@ -69,11 +69,7 @@
     --radius: 0.5rem;
       }
       
-        .swiper {
-          width: 600px;
-          height: 300px;
-        }
-      
+              
 }
  
 @layer base {
