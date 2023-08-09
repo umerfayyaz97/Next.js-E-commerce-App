@@ -6,7 +6,6 @@ import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
 import Link from "next/link";
 import AddToCart from "./AddToCart";
-import toast from "react-hot-toast";
 
 export const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product" ]{
