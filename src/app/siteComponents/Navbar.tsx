@@ -7,8 +7,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { CgShoppingCart } from "react-icons/cg";
 import Link from "next/link";
+<<<<<<< HEAD
 import { UserButton } from "@clerk/nextjs";
 import { useClerk } from "@clerk/clerk-react";
+=======
+import { SignIn, SignUp } from "@clerk/nextjs/app-beta";
+import { UserButton } from "@clerk/nextjs/app-beta";
+>>>>>>> 537449d4f8e3fbf3890b65426157f2c2abab6cf7
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -76,15 +81,22 @@ const Navbar: React.FC = () => {
                 <span className="absolute top-0 w-4 h-4 px-0 py-0 text-xs text-center text-white bg-red-500 rounded-full right-3">
                   {cartValue}
                 </span>
+
+                {/* <SignIn /> */}
                 <CgShoppingCart />
               </Button>
             </Link>
+<<<<<<< HEAD
             {/* Conditionally render UserButton or Sign In link */}
             {user.session ? (
               <UserButton afterSignOutUrl="/" />
             ) : (
               <Link href="/sign-in">Sign-In</Link>
             )}
+=======
+            {/* <Link href={"/sign-in"}>Sign</Link> */}
+            {/* <UserButton afterSignOutUrl="/" /> */}
+>>>>>>> 537449d4f8e3fbf3890b65426157f2c2abab6cf7
           </div>
           <div className="flex -mr-2 md:hidden">
             <button
