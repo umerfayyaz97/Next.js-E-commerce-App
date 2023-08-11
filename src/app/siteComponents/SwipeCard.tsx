@@ -58,7 +58,7 @@ const SwipeCard = async () => {
                 </div>
               </Link>
               <div className="flex justify-center">
-                <AddToCart item={item} />
+                <AddToCart item={item} key={index} />
               </div>
             </div>
           ))}
