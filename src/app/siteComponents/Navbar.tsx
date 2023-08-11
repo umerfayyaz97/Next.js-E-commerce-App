@@ -7,13 +7,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { CgShoppingCart } from "react-icons/cg";
 import Link from "next/link";
-<<<<<<< HEAD
 import { UserButton } from "@clerk/nextjs";
 import { useClerk } from "@clerk/clerk-react";
-=======
-import { SignIn, SignUp } from "@clerk/nextjs/app-beta";
-import { UserButton } from "@clerk/nextjs/app-beta";
->>>>>>> 537449d4f8e3fbf3890b65426157f2c2abab6cf7
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -81,22 +76,15 @@ const Navbar: React.FC = () => {
                 <span className="absolute top-0 w-4 h-4 px-0 py-0 text-xs text-center text-white bg-red-500 rounded-full right-3">
                   {cartValue}
                 </span>
-
-                {/* <SignIn /> */}
                 <CgShoppingCart />
               </Button>
             </Link>
-<<<<<<< HEAD
             {/* Conditionally render UserButton or Sign In link */}
             {user.session ? (
               <UserButton afterSignOutUrl="/" />
             ) : (
               <Link href="/sign-in">Sign-In</Link>
             )}
-=======
-            {/* <Link href={"/sign-in"}>Sign</Link> */}
-            {/* <UserButton afterSignOutUrl="/" /> */}
->>>>>>> 537449d4f8e3fbf3890b65426157f2c2abab6cf7
           </div>
           <div className="flex -mr-2 md:hidden">
             <button
@@ -166,7 +154,7 @@ const Navbar: React.FC = () => {
           {user.session ? (
             <UserButton afterSignOutUrl="/" />
           ) : (
-            <Link href="/sign-in">Sign In</Link>
+            <Link href="/sign-in">Sign-In</Link>
           )}
         </div>
       </div>
@@ -178,7 +166,8 @@ export default Navbar;
 
 // ------------------------------------------------------
 
-// import { useState } from "react";
+{
+  /* // import { useState } from "react";
 // import { useSelector } from "react-redux";
 // import { RootState } from "@/store/store";
 // import Image from "next/image";
@@ -188,9 +177,13 @@ export default Navbar;
 // import Link from "next/link";
 // import { UserButton } from "@clerk/nextjs";
 // import { useClerk } from "@clerk/clerk-react";
-
-// const Navbar: React.FC = () => {
-//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+ */
+}
+{
+  /* // const Navbar: React.FC = () => { */
+}
+{
+  /* //   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 //   const toggleMenu = () => {
 //     setIsMenuOpen(!isMenuOpen);
@@ -243,7 +236,8 @@ export default Navbar;
 //             </div>
 //           </div>
 //           <div className="items-center hidden space-x-2 md:flex sm:space-x-10">
-//             {/* ... Rest of the elements ... */}
+//             {/* ... Rest of the elements ... */
+}
 //             <Input
 //               className="mx-2 sm:mx-4"
 //               type="search"
