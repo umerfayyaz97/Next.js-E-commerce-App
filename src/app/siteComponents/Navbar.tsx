@@ -137,7 +137,6 @@ const Navbar: React.FC = () => {
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {/* ... Existing mobile menu items ... */}
-<<<<<<< HEAD
           <div
             className={`${isMenuOpen ? "block" : "hidden"} md:hidden`}
             id="mobile-menu"
@@ -188,27 +187,6 @@ const Navbar: React.FC = () => {
               <Link href="/sign-in">Sign-In</Link>
             )}
           </div>
-=======
-        </div>
-        {/* Shopping Cart Button in Mobile Menu */}
-        <div className="flex justify-center pb-3">
-          <Link href="/Cart">
-            <Button variant="secondary" className="relative">
-              <span className="absolute top-0 w-4 h-4 px-0 py-0 text-xs text-center text-white bg-red-500 rounded-full right-3">
-                {cartValue}
-              </span>
-              <CgShoppingCart />
-            </Button>
-          </Link>
-        </div>
-        {/* Conditionally render UserButton or Sign In link in mobile menu */}
-        <div className="px-2 pb-3 space-y-1 sm:px-3">
-          {user.session ? (
-            <UserButton afterSignOutUrl="/" />
-          ) : (
-            <Link href="/sign-in">Sign-In</Link>
-          )}
->>>>>>> 697bdf6e26acb1dae4d883e13b14b51e269f5a76
         </div>
       </div>
     </nav>
