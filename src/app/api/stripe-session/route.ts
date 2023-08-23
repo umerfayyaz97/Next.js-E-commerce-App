@@ -1,5 +1,3 @@
-// Import required dependencies and modules
-// import { IProduct } from "@/views/utils/mock";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
@@ -76,7 +74,7 @@ export async function POST(request: NextRequest) {
           enabled: true,
         },
         success_url: `${request.headers.get("origin")}/success`,
-        cancel_url: `${request.headers.get("origin")}/canceled`,
+        cancel_url: `${request.headers.get("origin")}/cancelled`,
       });
 
       // Set the customer session cookie if not already present

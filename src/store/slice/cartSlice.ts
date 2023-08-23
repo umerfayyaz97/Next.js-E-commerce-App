@@ -70,6 +70,10 @@ const cartSlice = createSlice({
       state.items = [];
       state.totalQuantity = 0;
     },
+    resetCart(state) {
+      state.items = [];
+      state.totalQuantity = 0;
+    },
   },
 });
 
