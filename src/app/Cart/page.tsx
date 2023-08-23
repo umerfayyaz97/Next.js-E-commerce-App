@@ -109,6 +109,7 @@ import {
   removeFromCart,
   emptyCart,
 } from "@/store/slice/cartSlice";
+import StripeCheckOutButton from "../siteComponents/StripeButton";
 
 const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product"]{
@@ -230,9 +231,10 @@ const CartPage: React.FC = () => {
               >
                 Empty Cart
               </button>
-              <button className="px-2 py-1 mt-2 text-white bg-green-500 rounded-md">
+              <StripeCheckOutButton />
+              {/* <button className="px-2 py-1 mt-2 text-white bg-green-500 rounded-md">
                 Checkout
-              </button>
+              </button> */}
             </div>
           </div>
         </>

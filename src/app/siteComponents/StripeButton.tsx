@@ -1,9 +1,9 @@
 // Import necessary modules and components
 "use client";
 import getStripePromise from "@/lib/Checkout";
-// import { CartRootState } from "@/types/cart";
+import { CartRootState } from "@/app/Types/cart";
 import { useSelector } from "react-redux";
-// import { IProduct } from "./utils/mock";
+import { IProduct } from "@/app/Types/mock";
 import toast from "react-hot-toast";
 
 // Component for the Stripe checkout button
@@ -12,6 +12,7 @@ const StripeCheckOutButton = () => {
   const cartItems: IProduct[] = useSelector(
     (state: CartRootState) => state.cart.items
   );
+  //   const cartItems = useSelector((state: CartRootState) => state.cart.items);
 
   // Function to handle the checkout process
   const handleCheckout = async () => {

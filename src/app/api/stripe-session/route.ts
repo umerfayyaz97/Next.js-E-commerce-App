@@ -1,5 +1,5 @@
 // Import required dependencies and modules
-import { IProduct } from "@/views/utils/mock";
+// import { IProduct } from "@/views/utils/mock";
 import { cookies } from "next/headers";
 import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
@@ -9,6 +9,7 @@ const key = process.env.STRIPE_SECRET_KEY || "";
 
 // Initialize the Stripe instance
 const stripe = new Stripe(key, {
+  // @ts-ignore
   apiVersion: "2022-11-15",
 });
 
