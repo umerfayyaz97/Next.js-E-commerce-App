@@ -20,7 +20,7 @@ export const store = configureStore({
     getDefaultMiddleware({
       serializableCheck: false,
     }),
-  //middleware: [thunk],  devTools: process.env.NODE_ENV !== 'production',
+
   devTools: true,
 });
 

@@ -1,9 +1,11 @@
+// "use Client";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "./siteComponents/Footer";
 import Navbar from "./siteComponents/Navbar";
 import Providers from "@/components/Provider";
 import { ClerkProvider } from "@clerk/nextjs/app-beta";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +21,8 @@ export default function RootLayout({
 }) {
   return (
     <ClerkProvider>
+      {/* <SignedIn>
+        <SignedOut> */}
       <html lang="en">
         <body className={inter.className}>
           <Providers>
@@ -30,6 +34,8 @@ export default function RootLayout({
           </Providers>
         </body>
       </html>
+      {/* </SignedOut>
+      </SignedIn> */}
     </ClerkProvider>
   );
 }
