@@ -37,12 +37,9 @@ const SwipeCard = async () => {
         </div>
         <div className="grid grid-cols gap-y-2 md:grid-cols-[repeat(3,auto)] justify-center  gap-x-6">
           {data.slice(0, 3).map((item, index) => (
-            <div>
+            <div key={index}>
               <Link href={`/Details/${item._id}`}>
-                <div
-                  key={index}
-                  className="transition-all duration-300 transform product-card hover:scale-105"
-                >
+                <div className="transition-all duration-300 transform product-card hover:scale-105">
                   <Image
                     src={urlForImage(item.image[0]).url()}
                     alt={item.title}
