@@ -1,10 +1,7 @@
-import { SignedIn } from "@clerk/clerk-react";
 import { authMiddleware, redirectToSignIn } from "@clerk/nextjs";
-import { RedirectUrl } from "@clerk/nextjs/dist/types/server";
-import { NextResponse } from "next/server";
 
 export default authMiddleware({
-  afterAuth(auth, req, evt) {
+  afterAuth(auth, req) {
     // Redirect users who aren't authenticated to the sign-in page,
     // except for public routes.
     if (!auth.userId && !auth.isPublicRoute) {
@@ -27,12 +24,6 @@ export default authMiddleware({
     "/Kids",
     "/All-Products",
   ],
-
-  // afterAuth(auth, req) {
-  //   if (!auth && req.url === "/Cart") {
-  //     return redirectToSignIn({ returnBackUrl: req.url });
-  //   }
-  // },
 });
 
 export const config = {

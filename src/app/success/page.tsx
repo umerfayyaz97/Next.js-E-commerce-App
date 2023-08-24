@@ -37,7 +37,7 @@ const Success: NextPage = () => {
       }
     };
     stripeSession();
-  }, []);
+  }, [clearCart]);
 
   return (
     <div className="success-wrapper">
