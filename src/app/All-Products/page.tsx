@@ -1,7 +1,8 @@
-"use Client";
+"use client";
 import React from "react";
 import { client } from "@/lib/sanityClient";
-import { Image as IImage } from "sanity";
+// import { Image as IImage } from "sanity";
+import { IProduct } from "../Types/cart";
 import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
 import Link from "next/link";
@@ -15,13 +16,6 @@ export const getProducts = async () => {
    }`);
   return res;
 };
-
-interface IProduct {
-  title: string;
-  image: IImage[];
-  price: number;
-  _id: string;
-}
 
 const allProducts = async () => {
   const data: IProduct[] = await getProducts();
