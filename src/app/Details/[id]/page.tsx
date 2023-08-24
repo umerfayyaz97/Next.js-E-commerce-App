@@ -5,11 +5,6 @@ import { Image as IImage, SanityClient } from "sanity";
 import Image from "next/image";
 import { urlForImage } from "../../../../sanity/lib/image";
 import AddToCart from "@/app/siteComponents/AddToCart";
-// import handleAddToCart from "@/app/addToCart/handleAddToCart";
-import { auth } from "@clerk/nextjs";
-import { useSelector } from "react-redux";
-import { RootState } from "@/store/store";
-import { Button } from "@/components/ui/button";
 
 export const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product"  ]{
@@ -37,16 +32,6 @@ const ProductDescription = async ({ params }: { params: { id: string } }) => {
   const data: IProduct[] = await getProducts();
   const product = data.find((i) => i._id === params.id);
 
-  const { userId } = auth();
-  // const quantity = useSelector(
-  //   (state: RootState) => state.cartSlice.totalQuantity
-  // );
-
-  // const handleAddToCartClick = async () => {
-  //   if (product && userId) {
-  //     await handleAddToCart(userId, product._id);
-  //   }
-  // };
   return (
     <>
       {product && (

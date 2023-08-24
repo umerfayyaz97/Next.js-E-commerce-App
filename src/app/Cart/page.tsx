@@ -232,9 +232,6 @@ const CartPage: React.FC = () => {
                 Empty Cart
               </button>
               <StripeCheckOutButton />
-              {/* <button className="px-2 py-1 mt-2 text-white bg-green-500 rounded-md">
-                Checkout
-              </button> */}
             </div>
           </div>
         </>
