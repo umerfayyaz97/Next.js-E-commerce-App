@@ -1,7 +1,8 @@
 "use client";
+
 import { NextPage } from "next";
 import Link from "next/link";
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { BsBagCheckFill } from "react-icons/bs";
 import { runFireworks } from "@/lib/fireWorks";
 import { Button } from "@/components/ui/button";
@@ -11,10 +12,12 @@ import toast from "react-hot-toast";
 
 const Success: NextPage = () => {
   const dispatch = useDispatch();
-  const clearCart = async () => {
+
+  const clearCart = useCallback(async () => {
     dispatch(cartActions.resetCart());
     toast.success("Success");
-  };
+  }, [dispatch]);
+
   useEffect(() => {
     const stripeSession = async () => {
       try {
@@ -25,7 +28,6 @@ const Success: NextPage = () => {
           const data = await res.json();
           if (data.session) {
             clearCart();
-            // localStorage.clear()
             runFireworks();
           } else {
             toast.error(data.message);
