@@ -1,21 +1,29 @@
 "use client";
 import React from "react";
 import { client } from "@/lib/sanityClient";
-// import { Image as IImage } from "sanity";
-import { IProduct } from "../Types/cart";
+import { Image as IImage } from "sanity";
+// import { IProduct } from "../Types/cart";
 import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
 import Link from "next/link";
+// import { getProducts } from "../Types/mock";
 
 export const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product" ]{
     title,
-    image[], 
+    image[],
     price,
     _id,
    }`);
   return res;
 };
+
+interface IProduct {
+  title: string;
+  image: IImage[];
+  price: number;
+  _id: string;
+}
 
 const allProducts = async () => {
   const data: IProduct[] = await getProducts();
@@ -34,6 +42,7 @@ const allProducts = async () => {
                 alt={item.title}
                 height={300}
                 width={300}
+                loading="lazy"
               />
 
               <h2 className=" font-[600] text-lg text-center">{item.title}</h2>
