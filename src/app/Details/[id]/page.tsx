@@ -6,7 +6,7 @@ import Image from "next/image";
 import { urlForImage } from "../../../../sanity/lib/image";
 import AddToCart from "@/app/siteComponents/AddToCart";
 
-export const getProducts = async () => {
+const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product"  ]{
     price,
       _id,

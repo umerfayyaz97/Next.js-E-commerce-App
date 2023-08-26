@@ -1,5 +1,4 @@
 import { UserButton } from "@clerk/nextjs/app-beta";
-import Link from "next/link";
 
 import React from "react";
 

@@ -8,7 +8,7 @@ import { urlForImage } from "../../../sanity/lib/image";
 import Link from "next/link";
 // import { getProducts } from "../Types/mock";
 
-export const getProducts = async () => {
+const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product" ]{
     title,
     image[],
