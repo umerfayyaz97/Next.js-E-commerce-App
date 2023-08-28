@@ -2,7 +2,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store/store";
-import { Image as IImage } from "sanity";
+// import { Image as IImage } from "sanity";
 import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
 // import { client } from "../../../sanity/lib/client";
