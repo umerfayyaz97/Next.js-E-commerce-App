@@ -6,7 +6,7 @@ import { Image as IImage } from "sanity";
 export const getProducts = async () => {
   const res = await client.fetch(`*[_type=="product" ]{
     title,
-    image[], 
+    image[],
     price,
     _id,
    }`);

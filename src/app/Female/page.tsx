@@ -1,4 +1,3 @@
-"use Client";
 import React from "react";
 import { client } from "@/lib/sanityClient";
 import { Image as IImage } from "sanity";

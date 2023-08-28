@@ -1,12 +1,11 @@
 "use client";
-
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "@/store/store";
 import { Image as IImage } from "sanity";
 import Image from "next/image";
 import { urlForImage } from "../../../sanity/lib/image";
-import { client } from "../../../sanity/lib/client";
+// import { client } from "../../../sanity/lib/client";
 import {
   incrementQuantity,
   decrementQuantity,
@@ -14,19 +13,8 @@ import {
   emptyCart,
 } from "@/store/slice/cartSlice";
 import StripeCheckOutButton from "../siteComponents/StripeButton";
-
-const getProducts = async () => {
-  const res = await client.fetch(`*[_type=="product"]{
-    image[], 
-    _id,
-  }`);
-  return res;
-};
-
-interface IProduct {
-  image: IImage[];
-  _id: string;
-}
+// import { Button } from "@/components/ui/button";
+import { IProduct, getProducts } from "../Types/CartFetch";
 
 const CartPage: React.FC = () => {
   const dispatch = useDispatch();
@@ -36,6 +24,7 @@ const CartPage: React.FC = () => {
   );
 
   const [data, setData] = React.useState<IProduct[]>([]);
+  console.log("cart data", data);
 
   React.useEffect(() => {
     const fetchData = async () => {
@@ -80,8 +69,9 @@ const CartPage: React.FC = () => {
         <>
           <h2 className="mb-4 text-2xl font-semibold">Your Cart</h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-            {cartItems.map((item) => {
+            {cartItems?.map((item) => {
               const product = data.find((p) => p._id === item.id);
+              console.log("prod", product);
               return (
                 product && (
                   <div
@@ -124,6 +114,7 @@ const CartPage: React.FC = () => {
               );
             })}
           </div>
+          {/* Total Quantity and Total price  */}
           <div className="mt-8">
             <h2 className="text-xl font-semibold">Receipt</h2>
             <div className="p-4 bg-white rounded-md shadow-md">
